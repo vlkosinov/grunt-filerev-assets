@@ -104,7 +104,7 @@ module.exports = function(grunt) {
       }
       
       grunt.file.write(options.dest,
-                       JSON.stringify(assets, null, spaces));
+                       JSON.stringify(arr, null, spaces));
 
       grunt.filerevassets = assets;
 
