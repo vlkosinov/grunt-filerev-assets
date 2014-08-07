@@ -96,6 +96,13 @@ module.exports = function(grunt) {
         spaces = 4;
       }
 
+      var arr = [];
+
+      for (var obj in assets) {
+        if (!assets.hasOwnProperty(obj)) return;
+        arr.push({from: obj, to: assets[obj]});
+      }
+      
       grunt.file.write(options.dest,
                        JSON.stringify(assets, null, spaces));
 
